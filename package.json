@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DanSoup/ds-lib/issues"
   },
-  "homepage": "https://github.com/DanSoup/ds-lib#readme"
+  "homepage": "https://github.com/DanSoup/ds-lib#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
