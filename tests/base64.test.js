@@ -21,4 +21,8 @@ describe('base64.toString()', () => {
     expect(base64.toString((64 * 64 * 5) + (64 * 2) + 7)).toBe('527');
     expect(base64.toString((64 * 64 * 59) + (64 * 11) + 17)).toBe('xBH');
   });
+  test('works when numbers are entered as a string', () => {
+    expect(base64.toString('16')).toBe('G');
+    expect(base64.toString('650')).toBe('AA');
+  });
 });
