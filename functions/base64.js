@@ -1,6 +1,9 @@
 const base64 = {
 
   toString: (number) => {
+
+    if (number === undefined) throw new Error();
+
     const base64Chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/';
     let base64String = [];
 

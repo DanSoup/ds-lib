@@ -25,4 +25,7 @@ describe('base64.toString()', () => {
     expect(base64.toString('16')).toBe('G');
     expect(base64.toString('650')).toBe('AA');
   });
+  test('invalid values throw an error', () => {
+    expect(() => base64.toString()).toThrow();
+  });
 });
