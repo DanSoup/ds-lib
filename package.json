@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DanSoup/ds-lib#readme",
   "devDependencies": {
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0"
   }
 }
