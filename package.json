@@ -19,5 +19,8 @@
   "devDependencies": {
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0"
+  },
+  "dependencies": {
+    "npm": "^6.9.0"
   }
 }
