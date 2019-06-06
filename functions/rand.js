@@ -1,16 +1,29 @@
-/*
-  rand()
-  For generating random values.
+const randSeeded = {
 
-  rand() - Generates a random number from 0 to 1. Equivalent to Math.random().
-  rand( $1:Number ) - Generates a random number from 0 to $1.
-  rand( $1:Number, $2:Number ) - Generates a random number from $1 to $2.
-  rand( $1:Number, $2:Number , $3:Number ) - Generates a random number from $1 to $2 in steps of $3.
-  rand( $1:Array ) - Selects a random element from $1. 
-*/
+  int: (max, min, seed) => {
+    
+    if (!max && !min) return Math.floor(seed * 2)
+    
+    max = max || 0;
+    min = min || 0;
 
-const rand = () => {
+    nMax = Math.max(max, min);
+    nMin = Math.min(max, min);
+
+    const range = nMax - nMin + 1;
+
+    return nMin + Math.floor(seed * range);
+
+  }
 
 }
 
-module.exports = rand;
+const rand = {
+
+  int: (max, min) => {
+    randSeeded.int(max, min, Math.random())
+  }
+
+}
+
+module.exports = {rand, randSeeded};
